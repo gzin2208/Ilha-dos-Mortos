@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ilha dos Mortos — Apocalipse na Ilha do Governador</title>
+<meta name="description" content="Jogo de sobrevivência zumbi em 2D, com câmera de cima, ambientado na Ilha do Governador, Rio de Janeiro. Baixe grátis para Windows.">
+<meta property="og:title" content="Ilha dos Mortos — Apocalipse na Ilha do Governador">
+<meta property="og:description" content="Gael e Benjamin, dois mecânicos do Jardim Guanabara, tentam sobreviver ao surto que fechou a Ilha. Baixe grátis para Windows.">
+<meta property="og:image" content="img/00_titulo.jpg">
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="fundo" aria-hidden="true"></div>
+  <div class="conteudo">
+    <h1 class="logo"><span class="l1">ILHA DOS</span><span class="l2">MORTOS</span><span class="sub">Apocalipse na Ilha do Governador</span></h1>
+    <p class="boas-vindas">Bem-vindo à Ilha. A ponte está fechada, as barcas pararam e a noite está chegando no Jardim Guanabara.</p>
+    <a class="baixar" id="baixar" href="downloads/IlhaDosMortos-Setup.exe" download>
+      <span class="b1">Baixar para Windows</span>
+      <span class="b2" id="info-download">Grátis · Windows 10 e 11 (64 bits) · versão 1.0.0 · 86 MB</span>
+    </a>
+    <a class="como" href="#instalar">Como instalar</a>
+  </div>
+</header>
+
+<main>
+  <section class="historia">
+    <h2>A história</h2>
+    <p>Sexta-feira, 7h40. Na Auto Mecânica Ivo, no Jardim Guanabara, <strong>Gael</strong> e <strong>Benjamin</strong> brigam por causa do pão na chapa enquanto um avião dá voltas sobre o Galeão sem pousar. No rádio, falam de uma tal "raiva atípica" no Terminal de Cargas.</p>
+    <p>Até o fim do dia, a Ilha do Governador vira outra coisa. Do Quebra-Coco ao Cocotá, do Tauá aos Bancários e até a Praia da Bica, os dois amigos atravessam ruas tomadas por infectados atrás da família, de respostas e de um jeito de sair da Ilha — antes que alguém do outro lado da ponte decida por eles.</p>
+    <ul class="pontos">
+      <li><strong>Sobrevivência sem enrolação.</strong> Revista casas e carros, tira gasolina com mangueira, conserta a Kombi e decide quando lutar, se esconder ou correr.</li>
+      <li><strong>Infectados que escutam.</strong> Passos, portas, alarmes e a luz da lanterna atraem hordas. Agachado, você passa despercebido.</li>
+      <li><strong>Escolhas difíceis.</strong> Sete capítulos, vozes para todos os personagens e dois finais — só uma decisão separa um do outro.</li>
+    </ul>
+  </section>
+
+  <section class="galeria">
+    <h2>Imagens do jogo</h2>
+    <div class="grade">
+      <a href="img/01_rua_noite.jpg" target="_blank"><img src="img/01_rua_noite_p.jpg" alt="Gael e Benjamin com a lanterna acesa numa rua do Quebra-Coco à noite, cercados por infectados" loading="lazy"></a>
+      <a href="img/02_cocota.jpg" target="_blank"><img src="img/02_cocota_p.jpg" alt="Praça do Cocotá com a ambulância em frente à Estação das Barcas" loading="lazy"></a>
+      <a href="img/03_bancarios_chuva.jpg" target="_blank"><img src="img/03_bancarios_chuva_p.jpg" alt="Estacionamento do conjunto dos Bancários debaixo de chuva" loading="lazy"></a>
+      <a href="img/05_taua.jpg" target="_blank"><img src="img/05_taua_p.jpg" alt="Rua do Tauá em frente à paróquia, com infectados se aproximando" loading="lazy"></a>
+      <a href="img/04_bica_noite.jpg" target="_blank"><img src="img/04_bica_noite_p.jpg" alt="Fogueira na areia da Praia da Bica durante a madrugada" loading="lazy"></a>
+      <a href="img/00_titulo.jpg" target="_blank"><img src="img/00_titulo_p.jpg" alt="Tela inicial do jogo na Rua Cambaúba, debaixo de chuva" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="instalar" id="instalar">
+    <h2>Como instalar</h2>
+    <ol>
+      <li>Clique em <strong>Baixar para Windows</strong> e salve o arquivo <code>IlhaDosMortos-Setup.exe</code>.</li>
+      <li>Abra o arquivo. Se o Windows mostrar "O Windows protegeu o computador", clique em <strong>Mais informações</strong> e depois em <strong>Executar assim mesmo</strong> (o jogo é independente e não tem assinatura digital paga).</li>
+      <li>Siga o instalador. No fim, o jogo abre sozinho e ganha atalhos na Área de Trabalho e no menu Iniciar.</li>
+    </ol>
+    <p class="controles"><strong>Controles:</strong> WASD anda · mouse mira · clique ataca · botão direito empurra · Shift corre · C agacha · E interage · F lanterna · Q arremessa · R curativo · Tab troca entre Gael e Benjamin · Esc pausa · F11 tela cheia. Também funciona com controle.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Ilha dos Mortos é uma obra de ficção. Os lugares existem; os mortos-vivos, ainda não.</p>
+  <p>Vozes sintetizadas com Piper (vozes pt-BR CC0 / CC BY 4.0) e Kokoro (Apache 2.0). Fontes Bebas Neue e Barlow (SIL OFL).</p>
+</footer>
+
+<script src="config.js"></script>
+<script>
+  // aplica o endereço de download configurado em config.js (útil ao hospedar o .exe fora do site)
+  (function () {
+    var c = window.ILHA_CONFIG || {};
+    var a = document.getElementById('baixar');
+    if (c.download) a.href = c.download;
+    if (c.info) document.getElementById('info-download').textContent = c.info;
+  })();
+</script>
+</body>
+</html>
